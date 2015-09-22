@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" ng-app="studentRoster">
+<head>
+  <meta charset="UTF-8">
+  <title>Surveybot App</title>
+  <script src="lib/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/SurveyAnswersController.js"></script>
+  <script src="controllers/SurveyQuestionsController.js"></script>
+  <script src="services/SurveyFactory.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+
+
+
+
+
+        <div class="col-md-12">
+          <!-- A/S/L -->
+          <form ng-submit="SurveyFactory.addSurvey()" class="form-inline" role="form">
+
+            <!-- Q 1 Age -->
+            <h4>Question 1: How old are you?</h4>
+            <div class="form-group">
+              <input type="text" ng-model="SurveyFactory.surveyAge"
+              class="form-control" id="survey-age" placeholder="How old are you?" required>
+            </div>
+            <!-- Q 2 Sex -->
+            <h4>Question 2: What's your gender?</h4>
+            <div class="form-group">
+              <input type="text" ng-model="SurveyFactory.surveyGender"
+              class="form-control" id="survey-gender" placeholder="What's your gender?" required>
+            </div>
+            <!-- Q 3 Location -->
+            <h4>Question 3: Where are you from?</h4>
+            <div class="form-group">
+              <input type="text" ng-model="SurveyFactory.surveyLocation"
+              class="form-control" id="survey-location" placeholder="Where are you from?" required>
+            </div><br/><br/>
+            <p><button type="submit" class="btn btn-warning btn-sm">Submit</button></p>
+          </form>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
